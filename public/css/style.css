@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/sky1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: 'montserrat';
+  color: #D9D9D9;
+}
+
+/* CONTAINER FLEXBOX */
+.container {
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.result-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.temp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 78px;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #FFFFFF;
+}
+
+#temp {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.max-min {
+  display: flex;
+  flex-direction: row;
+}
+#max {
+  padding-right: 1em;
+}
+
+#next-days {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+/* CONTEÚDO HEADER */
+
+.type-temp {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  justify-content: space-between;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+
+  color: #D9D9D9;
+}
+.type {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-type {
+  margin: 0px 10px 0px 10px;
+  text-align: center;
+}
+
+#back {
+  visibility: hidden;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1C2428;
+  opacity: 0.5;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* CONTEÚDO MAIN */
+.title {
+  font-family: 'Montserrat', sans-serif, Verdana, Geneva, Tahoma;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: clamp(2em, 1em + 3vw, 3em);
+}
+.upperCase {
+  text-transform: uppercase;
+}
+
+#search {
+  width: 100%;
+  height: clamp(1.5em, 1em + 2vw, 1.8em);
+  border: 0;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 15px 0px 15px 15px;
+  color: #6AA2D1;
+  background: rgba(255, 255, 255, 0.77);
+  font-family: 'Montserrat', sans-serif, Verdana, Geneva, Tahoma;
+}
+
+#search:focus {
+  border: 0 none;
+  background: rgba(255, 255, 255, 0.77);
+  box-shadow: none;
+  outline: 0;
+}
+#search::placeholder {
+  font-family: 'Montserrat', sans-serif, Verdana, Geneva, Tahoma;
+  color: #6AA2D1;
+  font-weight: normal;
+}
+
+/* footer */
+.paises {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paises .idioma {
+  margin: 10px;
+}
+
+/* AUTOCOMPLETE GOOGLE */
+
+.pac-container {
+  background: rgba(255, 255, 255, 0.77);
+  box-shadow: 0px 4px 4px rgba(106, 162, 209, 0.8);
+  border-radius: 10px 10px 10px 10px;
+}
+.pac-item {
+  border: none;
+}
+.pac-item:hover {
+  background: none;
+}
+
+.pac-item > span{
+  color: #6AA2D1;
+  font-family: 'Montserrat', sans-serif, Verdana, Geneva, Tahoma;
+}
+.pac-item span:hover {
+  color: #D2B3C1;
+}
+
+.pac-item > span:nth-of-type(3) {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+.pac-icon {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+.pac-container::after {
+  background-image: none;
+  width: 0px;
+  height: 0px;
+}
+

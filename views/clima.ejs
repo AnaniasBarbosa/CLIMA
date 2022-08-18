@@ -1,0 +1,24 @@
+<%- include('./partials/header.ejs') %>
+<main>
+  <div class="result-temp">
+    <div class="info">
+      <h1 id="cidade" class="title upperCase"></h1>
+      <p id="weather"></p>
+    </div>
+    <div class="temp">
+      <h1 id="temp"></h1>
+      <img src="/img/cloud.png" alt="nuvem ao lado da temperatura">
+    </div>
+    <div class="max-min">
+        <h3>MAX: <span id="max"></span></h3>
+        <h3>MIN: <span id="min"></span></h3>
+    </div>
+    <div>
+      <a href="" id="next-days">
+        Ver previsão para os próximos 5 dias
+      </a>
+    </div>
+  </div>
+</main>
+<script src="/js/climate.js"></script>
+<%- include('./partials/footer.ejs') %>
