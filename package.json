@@ -2,9 +2,6 @@
   "name": "clima",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": "16.x"
-  },
   "main": "index.js",
   "scripts": {
     "start": "./src/server.js",
@@ -17,9 +14,5 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "nodemon": "^2.0.19"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AnaniasBarbosa/CLIMA.git"
   }
 }
