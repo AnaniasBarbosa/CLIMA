@@ -5,7 +5,6 @@ function initAutocomplete() {
     document.getElementById("search"),
     {
       types: ["locality"],
-      componentRestrictions: {},
       fields: ["name", "geometry", "place_id"],
       componentRestrictions: { country: "br" },
     }
@@ -25,9 +24,9 @@ function onPlaceChanged() {
     const latitude = place.geometry.location.lat();
     const longitude = place.geometry.location.lng();
     const dadosRegiao = {
-      nome: cidade,
-      latitude: latitude,
-      longitude: longitude,
+      cidade,
+      latitude,
+      longitude,
     };
     localStorage.setItem("dadosRegiao", JSON.stringify(dadosRegiao));
     return (window.location.href = "clima");

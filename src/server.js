@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+const port = process.env.PORT;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -15,7 +17,7 @@ app.get("/clima", (req, res) => {
 });
 
 //CRIANDO SERVIDOR
-app.listen(3000, (error) => {
+app.listen(port, (error) => {
   if (!error) console.log("SERVIDOR EM EXECUÇÃO");
   else console.log("OCORREU ALGUM ERRO: ", error);
 });
